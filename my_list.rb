@@ -5,7 +5,8 @@ class MyList
     @list = list
   end
 
-  def each(&block)
-    @list.each(&block)
+  def initialize(*args)
+    @list = [1, 2, 3, 4]
+    args.each { |arg| @list << arg }
   end
 end
